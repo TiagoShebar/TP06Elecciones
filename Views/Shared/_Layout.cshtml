@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - TPXX - Apellido</title>
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+    <body>
+        <header style="position:fixed; top: 0; margin: 10px 0px 20px 0px;">
+            <nav>
+                <a href='@Url.Action("Index")'><img src="~/Imagenes/bandera.png" width="30%"></a>
+                <p><a href='@Url.Action("Elecciones")'>elecciones 2023</a></p>
+                <p><a href='@Url.Action("Creditos")'>créditos</a></p>
+            </nav>
+        </header>
+        <div style="padding:20px 10px 0px 10px;">
+            @RenderBody()
+        </div>
+
+        <footer>
+                &copy; @DateTime.Now.Year - Taller de Programación - TPXX
+        </footer>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
