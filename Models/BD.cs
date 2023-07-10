@@ -9,6 +9,14 @@ static class BD {
         string SQL = "INSERT INTO Candidato(IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@pIdPartido, @pApellido, @pNombre, @pFechaNacimiento, @pFoto, @pPostulacion)";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             db.Execute(SQL, new{pIdPartido = can.IdPartido, pApellido = can.Apellido, pNombre = can.Nombre, pFechaNacimiento = can.FechaNacimiento, pFoto = can.Foto, pPostulacion = can.Postulacion});
+            /*if(can.Postulacion == "DIPUTADO" || can.Postulacion == "DIPUTADA"){
+                SQL = "UPDATE Partidos SET CantidadDiputados = CantidadDiputados+1 WHERE IdPartido = @pIdPartido";
+                int rowsAffected = db.Execute(SQL, new {pIdPartido = can.IdPartido});
+            }
+            else if(can.Postulacion == "SENADOR" || can.Postulacion == "SENADORA"){
+                SQL = "UPDATE Partidos SET CantidadSenadores = CantidadSenadores+1 WHERE IdPartido = @pIdPartido";
+                int rowsAffected = db.Execute(SQL, new {pIdPartido = can.IdPartido});
+            }*/
         }
     }
 
@@ -16,6 +24,14 @@ static class BD {
         string SQL = "DELETE FROM Candidato WHERE IdCandidato = @pidCandidato";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             int registrosEliminados=db.Execute(SQL, new{pidCandidato = idCandidato});
+            /*if(can.Postulacion.ToUpper() == "DIPUTADO" || can.Postulacion.ToUpper() == "DIPUTADA"){
+                SQL = "UPDATE Partidos SET CantidadDiputados = CantidadDiputados-1 WHERE IdPartido = @pIdPartido";
+                int rowsAffected = db.Execute(SQL, new {can.pIdPartido});
+            }
+            else if(can.Postulacion.ToUpper() == "SENADOR" || can.Postulacion.ToUpper() == "SENADORA"){
+                SQL = "UPDATE Partidos SET CantidadSenadores = CantidadSenadores-1 WHERE IdPartido = @pIdPartido";
+                int rowsAffected = db.Execute(SQL, new {can.pIdPartido});
+            }*/
         }
     }
 

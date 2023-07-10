@@ -1,14 +1,27 @@
 <form action='@Url.Action("GuardarCandidato")' method="post">
-    <input type="hidden" name="IdPartido" value="@ViewBag.IdPartido">
-    <h2>Apellido</h2>
-    <input type="text" name="Apellido" placeholder="Apellido">
-    <h2>Nombre</h2>
-    <input type="text" name="Nombre" placeholder="Nombre">
-    <h2>Fecha de nacimiento</h2>
-    <input type="date" name="FechaNacimiento" placeholder="Fecha de nacimiento">
-    <h2>Url de la foto</h2>
-    <input type="text" name="Foto" placeholder="URL de la foto">
-    <h2>Postulación</h2>
-    <input type="text" name="Postulacion" placeholder="Puesto del partido">
-    <input type="submit" value="Enviar Datos">
+    <div><input type="hidden" name="IdPartido" value="@ViewBag.IdPartido"></div>
+    
+    <div>
+        <h2>Apellido</h2>
+        <input type="text" name="Apellido" placeholder="Apellido" autocomplete="off">
+    </div>
+    <div>
+        <h2>Nombre</h2>
+        <input type="text" name="Nombre" placeholder="Nombre" autocomplete="off">
+    </div>
+    <div>
+        <h2>Fecha de nacimiento</h2>
+        <input type="date" name="FechaNacimiento" placeholder="Fecha de nacimiento" autocomplete="off">
+    </div>
+    <div>
+        <h2>Url de la foto</h2>
+        <input type="text" name="Foto" placeholder="URL de la foto" autocomplete="off">
+    </div>
+    <div>
+        <h2>Postulación</h2>
+        <input type="text" name="Postulacion" placeholder="Puesto del partido" autocomplete="off">
+    </div>
+    <div>
+        <input type="submit" value="Enviar Datos">
+    </div>
 </form>
