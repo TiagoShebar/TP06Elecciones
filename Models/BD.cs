@@ -15,7 +15,7 @@ static class BD {
     public static void EliminarCandidato(int idCandidato){
         string SQL = "DELETE FROM Candidato WHERE IdCandidato = @pidCandidato";
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            db.Execute(SQL, new{pidCandidato = idCandidato});
+            int registrosEliminados=db.Execute(SQL, new{pidCandidato = idCandidato});
         }
     }
 
