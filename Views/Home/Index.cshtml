@@ -6,7 +6,7 @@
             <div>
                 <h2>@ViewBag.ListaPartidos[i].Nombre</h2>
                 <img src="~/Imagenes/@ViewBag.ListaPartidos[i].Logo">
-                <a href='@Url.Action("VerDetallePartido", new{idPartido=ViewBag.ListaPartidos[i].IdPartido})'>Ver detalle del partido</a>
+                <a href='@Url.Action("VerDetallePartido", new{idPartido=ViewBag.ListaPartidos[i].IdPartido})'><i class="fa-solid fa-eye"></i></a>
             </div>
     }
 </section>
