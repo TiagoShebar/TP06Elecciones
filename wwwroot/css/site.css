@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  bottom: 0;
+  margin-bottom: 10%;
 }
 header{
   background-color: rgba(52, 212, 233, 0.514);
@@ -135,6 +137,26 @@ header img {
   font-size: 500%;
 }
 
+.info-partido{
+  width: 40%;
+  margin-left: 2%;
+  margin-top: -1%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.info-partido img{
+  width: 25%;
+  margin-bottom: 3%;
+}
+
+.info-partido p{
+  font-size: 120%;
+  margin-top: -0.5%;
+}
+
+
 form {
   display: flex;
   flex-direction: column;
@@ -190,7 +212,6 @@ form div input[type="submit"]{
 
 
 footer {
-  position: fixed;
   width: 100%;
   bottom: 0; 
   background-color: rgba(52, 212, 233, 0.514);
@@ -199,5 +220,5 @@ footer {
 }
 
 footer p {
-    font-size: 130%;
+  font-size: 130%;
 }

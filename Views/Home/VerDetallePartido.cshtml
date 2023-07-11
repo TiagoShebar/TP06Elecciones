@@ -13,3 +13,11 @@
 <section class="link-central">
     <a href='@Url.Action("AgregarCandidato", new{idPartido=ViewBag.Partido.IdPartido})'><i class="fa-solid fa-circle-plus"></i></a>
 </section>
+<section class="info-partido">
+    <h2>@ViewBag.Partido.Nombre</h2>
+    <img src="~/Imagenes/@ViewBag.Partido.Logo">
+    <p><b>Sitio web:</b> <a href="@ViewBag.Partido.FechaFundacion">@ViewBag.Partido.SitioWeb</a></p>
+    <p><b>Fecha de fundación:</b> @ViewBag.Partido.FechaFundacion.ToShortDateString()</p>
+    <p><b>Cantidad de diputados:</b> @ViewBag.Partido.CantidadDiputados</p>
+    <p><b>Cantidad de senadores:</b> @ViewBag.Partido.CantidadSenadores</p>
+</section>
