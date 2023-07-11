@@ -1,0 +1,29 @@
+<form action='@Url.Action("GuardarPartido")' method="post">
+    <div>
+        <h2>Nombre</h2>
+        <input type="text" name="Nombre" placeholder="Nombre" autocomplete="off">
+    </div>
+    <div>
+        <h2>Logo</h2>
+        <input type="text" name="Logo" placeholder="Logo" autocomplete="off">
+    </div>
+    <div>
+        <h2>Sitio web</h2>
+        <input type="url" name="SitioWeb" placeholder="URL al sitio web" autocomplete="off">
+    </div>
+    <div>
+        <h2>Fecha de fundación</h2>
+        <input type="date" name="FechaFundacion" placeholder="Fecha de fundación" autocomplete="off">
+    </div>
+    <div>
+        <h2>Cantidad de diputados</h2>
+        <input type="number" name="CantidadDiputados" placeholder="Cantidad de diputados" autocomplete="off">
+    </div>
+    <div>
+        <h2>Cantidad de senadores</h2>
+        <input type="number" name="CantidadSenadores" placeholder="Cantidad de senadores" autocomplete="off">
+    </div>
+    <div>
+        <input type="submit" value="Enviar Datos">
+    </div>
+</form>

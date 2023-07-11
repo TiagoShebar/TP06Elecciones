@@ -72,6 +72,7 @@ header img {
   display: flex;
   flex-direction: row;
   text-align: center;
+  justify-content: space-around;
 }
 
 .Candidato-conteiner article{
@@ -79,16 +80,16 @@ header img {
   display: flex;
   flex-direction: column;
   background-color: rgba(190, 190, 190, 0.301);
-  margin-right: 2%;
-  margin-left: 2%;
   margin-top: 2%;
   align-items: center;
   justify-content: center;
   border-radius: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .Candidato-conteiner article img{
-  width: 60%;
+  width: 55%;
   border-radius: 5%;
 }
 
@@ -114,7 +115,7 @@ header img {
 
 
 .Candidato-conteiner article div {
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -138,22 +139,26 @@ header img {
 }
 
 .info-partido{
-  width: 40%;
+  margin-top: 2%;
+  width: 30%;
   margin-left: 2%;
-  margin-top: -1%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: start;
+  justify-content: space-around;
+  margin-bottom: 3%;
+}
+
+.info-partido .rebajar{
+  margin-top: 9%;
 }
 
 .info-partido img{
-  width: 25%;
-  margin-bottom: 3%;
+  width: 60%;
 }
 
 .info-partido p{
   font-size: 120%;
-  margin-top: -0.5%;
 }
 
 
@@ -210,13 +215,12 @@ form div input[type="submit"]{
 
 
 
-
 footer {
   width: 100%;
-  bottom: 0; 
+  bottom: 0%; 
   background-color: rgba(52, 212, 233, 0.514);
   text-align: center;
-  padding-bottom: 1%;
+  margin-top: 5%;
 }
 
 footer p {

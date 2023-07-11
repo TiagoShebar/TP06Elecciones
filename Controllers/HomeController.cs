@@ -8,7 +8,7 @@ public class HomeController : Controller
     {
         ViewBag.ListaPartidos = BD.ListarPartidos();
         return View();
-    }
+    }   
 
     public IActionResult VerDetallePartido(int idPartido){
         ViewBag.Partido = BD.VerInfoPartido(idPartido);
@@ -38,6 +38,22 @@ public class HomeController : Controller
         ViewBag.Partido = BD.VerInfoPartido(idPartido);
         ViewBag.ListaCandidatos = BD.ListarCandidatos(idPartido);
         return View("VerDetallePartido");
+    }
+
+    public IActionResult AgregarPartido(){
+        return View();
+    }
+
+    [HttpPost]public IActionResult GuardarPartido(Partido par){
+        BD.AgregarPartido(par);
+        ViewBag.ListaPartidos = BD.ListarPartidos();
+        return View("Index");
+    }
+
+    public IActionResult EliminarPartido(int idPartido){
+        BD.EliminarPartido(idPartido);
+        ViewBag.ListaPartidos = BD.ListarPartidos();
+        return View("Index");
     }
 
     public IActionResult Elecciones(){
