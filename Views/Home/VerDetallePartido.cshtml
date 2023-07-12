@@ -4,7 +4,7 @@
         <img src="~/Imagenes/@ViewBag.Partido.Logo">
     </div>
     <div class="rebajar">
-        <p><b>Sitio web:</b> @ViewBag.Partido.FechaFundacion</p>
+        <p><b>Sitio web:</b> <a href="@ViewBag.Partido.SitioWeb">@ViewBag.Partido.SitioWeb</a></p>
         <p><b>Fecha de fundación:</b> @ViewBag.Partido.FechaFundacion.ToShortDateString()</p>
         <p><b>Cantidad de diputados:</b> @ViewBag.Partido.CantidadDiputados</p>
         <p><b>Cantidad de senadores:</b> @ViewBag.Partido.CantidadSenadores</p>
@@ -16,7 +16,7 @@
             <h2>@ViewBag.ListaCandidatos[i].Nombre @ViewBag.ListaCandidatos[i].Apellido</h2>
             <img src="~/Imagenes/@ViewBag.ListaCandidatos[i].Foto">
             <div>
-                <a href='@Url.Action("VerDetalleCandidato", new{idPartido=ViewBag.Partido.IdPartido})'><i class="fa-solid fa-eye"></i></a>
+                <a href='@Url.Action("VerDetalleCandidato", new{idCandidato=ViewBag.ListaCandidatos[i].IdCandidato})'><i class="fa-solid fa-eye"></i></a>
                 <a href='@Url.Action("EliminarCandidato", new{idPartido=ViewBag.Partido.IdPartido, idCandidato=ViewBag.ListaCandidatos[i].IdCandidato})'><i class="fa-solid fa-trash"></i></a>
             </div>
         </article>

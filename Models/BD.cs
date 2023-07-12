@@ -43,11 +43,9 @@ static class BD {
     }
 
     public static void EliminarPartido(int idPartido){
-        string SQL = "DELETE FROM Partido WHERE IdPartido = @pidPartido";
+        string SQL = "DELETE FROM Candidato WHERE IdPartido = @pidPartido; DELETE FROM Partido WHERE IdPartido = @pidPartido;";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             int registrosEliminados=db.Execute(SQL, new{pidPartido = idPartido});
-            SQL = "DELETE FROM Candidato WHERE IdPartido = @pidPartido";
-            registrosEliminados=db.Execute(SQL, new{pidPartido = idPartido});
         }
     }
 

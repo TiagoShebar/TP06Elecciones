@@ -1,0 +1,10 @@
+<section class="info-candidato">
+    <div>
+        <h2>@ViewBag.Candidato.Nombre @ViewBag.Candidato.Apellido</h2>
+        <img src="~/Imagenes/@ViewBag.Candidato.Foto">
+    </div>
+    <div class="rebajar">
+        <p><b>Fecha de nacimiento:</b> @ViewBag.Candidato.FechaNacimiento.ToShortDateString()</p>
+        <p><b>Postulación:</b> @ViewBag.Candidato.Postulacion</p>
+    </div>
+</section>

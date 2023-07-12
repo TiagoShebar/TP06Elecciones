@@ -3,6 +3,7 @@ body {
   padding: 0;
   bottom: 0;
   margin-bottom: 10%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 header{
   background-color: rgba(52, 212, 233, 0.514);
@@ -33,6 +34,9 @@ header img {
   margin-top: 3%;
   display: flex;
   text-align: center;
+  flex-basis: calc(20%,2%);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .Partido-conteiner div {
@@ -46,11 +50,11 @@ header img {
   align-items: center;
   justify-content: center;
   border-radius: 10%;
+  flex-basis: calc(18% - 2%)
 }
 
 .Partido-conteiner div h2 {
   font-size: 130%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -68,15 +72,41 @@ header img {
   font-size: 170%;
 }
 
+.Partido-conteiner div div a{
+  font-size: 170%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: black;
+}
+
+.Partido-conteiner div div a:hover{
+  filter: opacity(70%);
+}
+
+
+.Partido-conteiner div div {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: none;
+}
+
 .Candidato-conteiner {
   display: flex;
   flex-direction: row;
   text-align: center;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .Candidato-conteiner article{
-  width: 70%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   background-color: rgba(190, 190, 190, 0.301);
@@ -86,6 +116,7 @@ header img {
   border-radius: 10%;
   margin-left: 2%;
   margin-right: 2%;
+  flex-basis: calc(23% - 2%)
 }
 
 .Candidato-conteiner article img{
@@ -95,7 +126,6 @@ header img {
 
 .Candidato-conteiner article h2 {
   font-size: 130%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -140,27 +170,63 @@ header img {
 
 .info-partido{
   margin-top: 2%;
-  width: 30%;
-  margin-left: 2%;
+  width: 80%;
+  margin-left: 5%;
   display: flex;
   flex-direction: row;
   align-items: start;
-  justify-content: space-around;
+  justify-content: start;
   margin-bottom: 3%;
 }
 
 .info-partido .rebajar{
-  margin-top: 9%;
+  margin-top: 3%;
 }
 
 .info-partido img{
-  width: 60%;
+  width: 70%;
+  margin-right: 100%;
 }
 
 .info-partido p{
   font-size: 120%;
 }
 
+.info-partido div{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-candidato{
+  margin-top: 2%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-bottom: 3%;
+}
+
+.info-candidato .rebajar{
+  margin-top: 3%;
+}
+
+.info-candidato img {
+  width: 70%;
+  margin-right: 100%;
+}
+
+.info-candidato div {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-candidato p {
+  font-size: 120%;
+}
 
 form {
   display: flex;
@@ -179,19 +245,19 @@ form div h2{
   text-align: center;
 }
 
-form div input[type="text"], input[type="date"]{
+form div input[type="text"], input[type="date"], input[type="number"], input[type="url"]{
   width: 100%;
   transition: 0.5s;
   margin-top: -5%;
   height: 35px;
 }
 
-form div input[type="text"]:focus, input[type="date"]:focus{
+form div input[type="text"]:focus, input[type="date"]:focus, input[type="number"]:focus, input[type="url"]:focus{
   width: 120%;
   transition: 0.5s;
 }
 
-form div input[type="text"]::placeholder, input[type="date"]::placeholder{
+form div input[type="text"]::placeholder, input[type="date"]::placeholder, input[type="number"]::placeholder, input[type="url"]::placeholder{
   text-align: center;
 }
 
@@ -216,11 +282,7 @@ form div input[type="submit"]{
 
 
 footer {
-  width: 100%;
-  bottom: 0%; 
   background-color: rgba(52, 212, 233, 0.514);
-  text-align: center;
-  margin-top: 5%;
 }
 
 footer p {
