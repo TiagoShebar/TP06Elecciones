@@ -11,18 +11,14 @@
         <header>
             <nav>
                 <a href='@Url.Action("Index")'><img src="~/Imagenes/bandera.png" alt="Bandera Argentina"></a>
-                <a href='@Url.Action("Creditos")'>Inicio</a>
+                <a href='@Url.Action("Index")'>Inicio</a>
                 <a href='@Url.Action("Elecciones")'>Elecciones</a>
                 <a href='@Url.Action("Creditos")'>Créditos</a>
             </nav>
         </header>
-        <div>
+        <div style="margin-top: 7%;">
             @RenderBody()
         </div>
-
-        <footer>
-                <p>&copy; @DateTime.Now.Year - Tiago Shebar - Elecciones2023</p>
-        </footer>
         <script src="~/js/site.js" asp-append-version="true"></script>
         @await RenderSectionAsync("Scripts", required: false)
     </body>

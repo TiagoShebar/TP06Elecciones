@@ -1,7 +1,12 @@
 <section class="info-partido">
     <div>
         <h2>@ViewBag.Partido.Nombre</h2>
-        <img src="~/Imagenes/@ViewBag.Partido.Logo">
+        @if(ViewBag.Partido.Logo == ViewBag.Partido.Nombre.ToLower() + ".jpg" || ViewBag.Partido.Logo == ViewBag.Partido.Nombre.ToLower() + ".png"){
+                <img src="~/Imagenes/@ViewBag.Partido.Logo">
+            }
+            else{
+                <img src="@ViewBag.Partido.Logo">
+            }
     </div>
     <div class="rebajar">
         <p><b>Sitio web:</b> <a href="@ViewBag.Partido.SitioWeb">@ViewBag.Partido.SitioWeb</a></p>
@@ -14,7 +19,12 @@
     @for(int i = 0; i<ViewBag.ListaCandidatos.Count; i++){
         <article>
             <h2>@ViewBag.ListaCandidatos[i].Nombre @ViewBag.ListaCandidatos[i].Apellido</h2>
-            <img src="~/Imagenes/@ViewBag.ListaCandidatos[i].Foto">
+            @if(ViewBag.ListaCandidatos[i].Foto == ViewBag.ListaCandidatos[i].Nombre.ToLower() + ViewBag.ListaCandidatos[i].Apellido + ".png" || @ViewBag.ListaCandidatos[i].Foto == ViewBag.ListaCandidatos[i].Nombre.ToLower() + ViewBag.ListaCandidatos[i].Apellido + ".jpg"){
+                <img src="~/Imagenes/@ViewBag.ListaCandidatos[i].Foto">
+            }
+            else{
+                <img src="@ViewBag.ListaCandidatos[i].Foto">
+            }
             <div>
                 <a href='@Url.Action("VerDetalleCandidato", new{idCandidato=ViewBag.ListaCandidatos[i].IdCandidato})'><i class="fa-solid fa-eye"></i></a>
                 <a href='@Url.Action("EliminarCandidato", new{idPartido=ViewBag.Partido.IdPartido, idCandidato=ViewBag.ListaCandidatos[i].IdCandidato})'><i class="fa-solid fa-trash"></i></a>

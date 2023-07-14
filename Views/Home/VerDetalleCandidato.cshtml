@@ -1,7 +1,12 @@
 <section class="info-candidato">
     <div>
         <h2>@ViewBag.Candidato.Nombre @ViewBag.Candidato.Apellido</h2>
-        <img src="~/Imagenes/@ViewBag.Candidato.Foto">
+        @if(ViewBag.Candidato.Foto == ViewBag.Candidato.Nombre.ToLower() + ViewBag.Candidato.Apellido + ".png" || @ViewBag.Candidato.Foto == ViewBag.Candidato.Nombre.ToLower() + ViewBag.Candidato.Apellido + ".jpg"){
+                <img src="~/Imagenes/@ViewBag.Candidato.Foto">
+            }
+            else{
+                <img src="@ViewBag.Candidato.Foto">
+            }
     </div>
     <div class="rebajar">
         <p><b>Fecha de nacimiento:</b> @ViewBag.Candidato.FechaNacimiento.ToShortDateString()</p>

@@ -5,7 +5,12 @@
     @for(int i = 0; i<ViewBag.ListaPartidos.Count; i++){
             <div>
                 <h2>@ViewBag.ListaPartidos[i].Nombre</h2>
+                @if(ViewBag.ListaPartidos[i].Logo == ViewBag.ListaPartidos[i].Nombre.ToLower() + ".jpg" || ViewBag.ListaPartidos[i].Logo == ViewBag.ListaPartidos[i].Nombre.ToLower() + ".png"){
                 <img src="~/Imagenes/@ViewBag.ListaPartidos[i].Logo">
+            }
+            else{
+                <img src="@ViewBag.ListaPartidos[i].Logo">
+            }
                 <div>
                     <a href='@Url.Action("VerDetallePartido", new{idPartido=ViewBag.ListaPartidos[i].IdPartido})'><i class="fa-solid fa-eye"></i></a>
                     <a href='@Url.Action("EliminarPartido", new{idPartido=ViewBag.ListaPartidos[i].IdPartido})'><i class="fa-solid fa-trash"></i></a>
