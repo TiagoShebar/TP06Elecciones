@@ -1,11 +1,11 @@
 <form action='@Url.Action("GuardarPartido")' method="post">
     <div>
         <h2>Nombre</h2>
-        <input type="text" name="Nombre" placeholder="Nombre" autocomplete="off">
+        <input type="text" name="Nombre" placeholder="Nombre" autocomplete="off" required>
     </div>
     <div>
         <h2>Logo</h2>
-        <input type="text" name="Logo" placeholder="Logo" autocomplete="off">
+        <input type="text" name="Logo" placeholder="Logo" autocomplete="off" required>
     </div>
     <div>
         <h2>Sitio web</h2>
@@ -13,15 +13,15 @@
     </div>
     <div>
         <h2>Fecha de fundación</h2>
-        <input type="date" name="FechaFundacion" placeholder="Fecha de fundación" autocomplete="off">
+        <input type="date" name="FechaFundacion" placeholder="Fecha de fundación" autocomplete="off" required>
     </div>
     <div>
         <h2>Cantidad de diputados</h2>
-        <input type="number" name="CantidadDiputados" placeholder="Cantidad de diputados" autocomplete="off">
+        <input type="number" name="CantidadDiputados" placeholder="Cantidad de diputados" autocomplete="off" required>
     </div>
     <div>
         <h2>Cantidad de senadores</h2>
-        <input type="number" name="CantidadSenadores" placeholder="Cantidad de senadores" autocomplete="off">
+        <input type="number" name="CantidadSenadores" placeholder="Cantidad de senadores" autocomplete="off" required>
     </div>
     <div>
         <input type="submit" value="Enviar Datos">

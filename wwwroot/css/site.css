@@ -246,14 +246,24 @@ header img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .elecciones h1 {
   font-size: 200%;
 }
 .elecciones p{
-  width: 30%;
+  width: 40%;
   font-size: 140%;
+}
+
+.arrow {
+  text-align: center;
+}
+
+.arrow a {
+  font-size: 600%;
+  color: black;
 }
 
 form {
@@ -263,7 +273,7 @@ form {
 }
 
 form div {
-  margin-top: 2%;
+  margin-bottom: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
